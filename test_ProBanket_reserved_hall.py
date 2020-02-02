@@ -13,7 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains # lля ско�
 from random import randint
 import string
 
-import pytest
+#import pytest
  # здесь  резервация зала
 
 class reserved_hall(unittest.TestCase):
