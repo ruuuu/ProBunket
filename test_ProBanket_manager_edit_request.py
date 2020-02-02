@@ -14,7 +14,7 @@ from selenium.webdriver.common.action_chains import ActionChains # lля ско�
 from random import randint
 import string
 
-import pytest
+#import pytest
  # здесь  редактирование  заявки
 
 class edit_request_from_manager(unittest.TestCase):
