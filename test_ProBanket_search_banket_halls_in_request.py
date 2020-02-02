@@ -14,7 +14,7 @@ import time
 from random import randint
 import string
 
-import pytest
+#import pytest
  # здесь  поиск залов на странице заявки
 
 class Search_halls_in_request(unittest.TestCase):
