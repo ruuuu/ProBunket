@@ -13,13 +13,14 @@ from selenium.webdriver.common.action_chains import ActionChains # lля ско�
 
 from random import randint
 import string
+import allure
 
 #import pytest
  # здесь  редактирование  заявки
 
 class edit_request_from_manager(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
@@ -46,7 +47,7 @@ class edit_request_from_manager(unittest.TestCase):
             button_voity.click()
             print("button is visible")
 
-
+    @allure.step("method generation propose")
     def my_metho_with_predlojenie(self, kolvo_bukv_v_slove, count_slov, count_predlojeniy):  # генерит неколько предложений
 
         list_predloj = []
