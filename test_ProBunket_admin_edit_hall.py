@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import Select  # работа со списк
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколддинга к нужному элементу импортируем класс ActionChains
-
+import allure
 #import pytest
 
 
@@ -19,7 +19,7 @@ import string
 
 class Admin_edit_hall(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
