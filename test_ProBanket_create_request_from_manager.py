@@ -13,13 +13,14 @@ from selenium.webdriver.common.action_chains import ActionChains # lля ско�
 
 from random import randint
 import string
+import allure
 
 #import pytest
  # здесь  оставление заявки партнером
 
 class Create_request_from_manager(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
@@ -46,7 +47,7 @@ class Create_request_from_manager(unittest.TestCase):
             button_voity.click()
             print("button is visible")
 
-
+    @allure.step("method gnerate propose")
     def my_metho_with_predlojenie(self, kolvo_bukv_v_slove, count_slov, count_predlojeniy):  # генерит неколько предложений
 
         list_predloj = []
@@ -68,7 +69,7 @@ class Create_request_from_manager(unittest.TestCase):
 
         return str(' '.join(list_predloj))
 
-
+    @allure.step("method generate preposition")
     def my_metho_randem_stroka(self, kolvo_bukv_v_slove, count_slov):  # генерит предложение
 
         list_slov = []
@@ -85,7 +86,7 @@ class Create_request_from_manager(unittest.TestCase):
 
         return str(' '.join(list_slov))
 
-
+    @allure.step("method genrate phone")
     def generation_tel_phone(self):  # генерит номер телфона
 
         list_digits = []
