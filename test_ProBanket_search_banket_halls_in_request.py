@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколддинга к нужному элементу импортируем класс ActionChains
 import time
+import allure
 
 from random import randint
 import string
@@ -19,7 +20,7 @@ import string
 
 class Search_halls_in_request(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
