@@ -16,13 +16,14 @@ from selenium.webdriver.common.action_chains import ActionChains # lля ско�
 
 from random import randint
 import string
+import allure
 
 #import pytest
  # здесь  авторизация админа(компаний)
 
 class Admin_authorization(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
