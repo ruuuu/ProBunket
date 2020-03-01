@@ -12,13 +12,14 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколддинга к нужному элементу импортируем класс ActionChains
 from random import randint
 import string
+import allure
 
 #import pytest
  # здесь  резервация зала
 
 class reserved_hall(unittest.TestCase):
 
-
+    @allure.step("admin authorization method")
     def authorization(self, driver): # авторизация
 
         driver.get("https://admin.probanket.technaxis.com/external/login")
@@ -44,7 +45,9 @@ class reserved_hall(unittest.TestCase):
         if button_voity.is_displayed():  # если кнпока видна , то
             button_voity.click()
             print("button is visible")
-
+   
+   
+    @allure.step("method generate propose")
     def my_metho_with_predlojenie(self, kolvo_bukv_v_slove, count_slov,
                                   count_predlojeniy):  # генерит неколько предложений
 
